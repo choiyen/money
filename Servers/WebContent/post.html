@@ -1,0 +1,25 @@
+<p>memberid : <span id="userId"></span></p>
+<p>password: <span id="password"></span></p>
+<p>nickname: <span id="nickname"></span></p>
+<p>phone: <span id="mobile"></span></p>
+<p>email: <span id="mail"></span></p>
+<p>sua: <span id="suba"></span></p>
+<p>sub: <span id="subb"></span></p>
+
+
+<script type="text/javascript">
+   function getParameterByName(name) {
+        name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+        var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+                results = regex.exec(location.search);
+        return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+    }
+    document.getElementById("userId").innerHTML = getParameterByName('userId');
+    document.getElementById("password").innerHTML = getParameterByName('password1');
+    document.getElementById("nickname").innerHTML = getParameterByName('nickname');
+    document.getElementById("mobile").innerHTML = getParameterByName('mobile');
+    document.getElementById("mail").innerHTML = getParameterByName('mail');
+    document.getElementById("suba").innerHTML = getParameterByName('suba');
+    document.getElementById("subb").innerHTML = getParameterByName('subb');
+</script>
+
